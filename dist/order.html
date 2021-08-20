@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.0/slimselect.min.css" rel="stylesheet"></link>
+
+    <link rel="stylesheet" href="./main.min.css">
+</head>
+<body>
+    <div class="modal" id="modal">
+        <div class="modal__entering">
+            <h2 class="modal__title">Вход</h2>
+            <div class="modal__wrap">
+                <form class="modal__form">
+                    <div class="modal__form--wrap">
+                        <div class="modal__tab modal__enter modal__hidden">
+                            <div class="modal__labels">
+                                <label class="modal__label">
+                                    <div class="modal__key">Эл. почта или телефон</div>
+                                    <input class="modal__input">
+                                </label>
+                                <label class="modal__label">
+                                    <div class="modal__key">Пароль</div>
+                                    <input class="modal__input">
+                                </label>
+                            </div>
+                            <div class="modal__footer">
+                                <div class="modal__remember">
+                                    <input class="modal__remember--check" type="checkbox" id="remember1" name="Russia">
+                                    <label class="modal__remember--text" for="remember1">Запомнить меня</label>
+                                </div>
+                                <div class="modal__forget">Забыли пароль?</div>
+                            </div>
+                        </div>
+                        <div class="modal__tab modal__regist">
+                            <div class="modal__labels">
+                                <div class="modal__checks">
+                                    <label class="delivery__button">
+                                        <input class="delivery__checkbox" name="pf" type="checkbox">
+                                        <span class="delivery__block"></span>
+                                        <span class="delivery__text modal__checks--text">Частное лицо</span>
+                                    </label>
+                                    <label class="delivery__button">
+                                        <input class="delivery__checkbox" name="lf" type="checkbox">
+                                        <span class="delivery__block"></span>
+                                        <span class="delivery__text modal__checks--text">Юридическое лицо или ИП</span>
+                                    </label>
+                                </div>
+                                <label class="modal__label">
+                                    <div class="modal__key">Имя</div>
+                                    <input type="text" class="modal__input">
+                                </label>
+                                <label class="modal__label">
+                                    <div class="modal__key">Фамилия</div>
+                                    <input type="text" class="modal__input">
+                                </label>
+                                <label class="modal__label">
+                                    <div class="modal__key">Номер телефона</div>
+                                    <input type="text" placeholder="+7" class="modal__input">
+                                </label>
+                                <label class="modal__label">
+                                    <div class="modal__key">Эл. почта</div>
+                                    <input type="text" class="modal__input">
+                                </label>
+                                <label class="modal__label">
+                                    <div class="modal__key">Пароль</div>
+                                    <input type="text" class="modal__input">
+                                </label>
+                                <label class="modal__label">
+                                    <div class="modal__key">Подтвердите пароль</div>
+                                    <input type="text" class="modal__input">
+                                </label>
+                            </div>
+                            <div class="modal__footer">
+                                <div class="modal__agreement"><span>Регистрируясь, вы соглашаетесь с 
+                                    <span class="modal__agreement modal__agreement--blue">пользовательским соглашением</span>
+                                </span>
+                                </div>
+                            </div>
+                            <div class="modal__socials modal__socials--regist">
+                                <div class="modal__line--regist">
+                                    <span class="modal__line--regist--item"></span>
+                                    <span class="modal__line--regist--item">или</span>
+                                    <span class="modal__line--regist--item"></span>
+                                </div>
+                                <h3 class="modal__title--small">Войти как пользователь</h3>
+                                <a href="#" class="modal__icon--wrap">
+                                    <div class="modal--wrap">
+                                        <svg class="modal__icon modal__icon--fb">
+                                            <use xlink:href="./img/icons/sprite.svg#fb"></use>
+                                        </svg>
+                                        <div class="modal__icon--text">Facebook</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="modal__icon--wrap">
+                                    <div class="modal--wrap">
+                                        <!-- <svg class="modal__icon icon-colors">
+                                            <use xlink:href="./img/icons/sprite.svg#google"></use>
+                                        </svg> -->
+                                        <img src="./img/content/google.png" alt="google" class="modal__img">
+                                        <div class="modal__icon--text">Google</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="modal__buttons">
+                            <input type="submit" value="Войти" class="modal__submit modal__submit--mt11">
+                            <a href="#" class="modal__register">Зарегистрироваться</a>
+                        </div>
+                    </div>
+                    <div class="modal__line">
+                        <span class="modal__line--item"></span>
+                        <span class="modal__line--item">или</span>
+                        <span class="modal__line--item"></span>
+                    </div>
+                </form>
+                <div class="modal__socials">
+                    <h3 class="modal__title--small">Войти как пользователь</h3>
+                    <a href="#" class="modal__icon--wrap">
+                        <div class="modal--wrap">
+                            <svg class="modal__icon modal__icon--fb">
+                                <use xlink:href="./img/icons/sprite.svg#fb"></use>
+                            </svg>
+                            <div class="modal__icon--text">Facebook</div>
+                        </div>
+                    </a>
+                    <a href="#" class="modal__icon--wrap">
+                        <div class="modal--wrap">
+                            <!-- <svg class="modal__icon icon-colors">
+                                <use xlink:href="./img/icons/sprite.svg#google"></use>
+                            </svg> -->
+                            <img src="./img/content/google.png" alt="google" class="modal__img">
+                            <div class="modal__icon--text">Google</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modalBasket">
+        <div class="modal__entering">
+            <h2 class="modal__title">Корзина</h2>
+            <ul class="goods__list">
+                <li class="goods__item modal__item">
+                    <div class="goods__item--wrap modal__product">
+                        <div class="gooods__naming">
+                            <div class="goods__naming--wrap">
+                                <picture>
+                                    <source srcset="./img/content/basket-mb.png" media="(max-width: 799px)">
+                                    <img src="./img/content/goodspic.png" alt="goods" class="goods__pic">
+                                </picture>
+                                <div class="goods__title">Кисть № 2 угловая</div>
+                            </div>
+                        </div>
+                        <div class="modal__blocks">
+                            <div class="goods__block">
+                                <div class="product__quantity--choose">
+                                    <div class="product__minus">-</div>
+                                    <input type="number" value="1" class="product__input">
+                                    <div class="product__plus">+</div>
+                                </div>
+                            </div>
+                            <div class="goods__block">
+                                <div class="goods__text">₽ 540 р.</div>
+                            </div>
+                            <svg class="goods__trash">
+                                <use xlink:href="./img/icons/sprite.svg#trash"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </li>
+                <li class="goods__item modal__item">
+                    <div class="goods__item--wrap modal__product">
+                        <div class="gooods__naming">
+                            <div class="goods__naming--wrap">
+                                <img src="./img/content/goodspic.png" alt="goods" class="goods__pic">
+                                <div class="goods__title">Кисть № 2 угловая</div>
+                            </div>
+                        </div>
+                        <div class="modal__blocks">
+                            <div class="goods__block">
+                                <div class="product__quantity--choose">
+                                    <div class="product__minus">-</div>
+                                    <input type="number" value="1" class="product__input">
+                                    <div class="product__plus">+</div>
+                                </div>
+                            </div>
+                            <div class="goods__block">
+                                <div class="goods__text">₽ 540 р.</div>
+                            </div>
+                            <svg class="goods__trash">
+                                <use xlink:href="./img/icons/sprite.svg#trash"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="modal__total">
+                <span class="modal__total--text">Итого</span>
+                <span class="modal__total--text">₽ 540 р.</span>
+            </div>
+            <div class="modal__order">
+                <a href="#" class="btn--continue--purch">Продолжить покупки</a>
+                <a href="#" class="btn--make--order">Оформить заказ</a>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="maincontent">
+        <section class="section section__rainbow">
+            <header class="header">
+                <div class="container header__container">
+                    <div class="header__rightside">
+                        <ul class="header__list">
+                            <li class="header__list--item">
+                                <a href="./index.html" class="header__list--link">Главная</a>
+                            </li>
+                            <li class="header__list--item">
+                                <a href="./info.html" class="header__list--link">О нас</a>
+                            </li>
+                            <li class="header__list--item">
+                                <a href="./payment.html" class="header__list--link">Оплата</a>
+                            </li>
+                            <li class="header__list--item">
+                                <a href="./delivery.html" class="header__list--link">Доставка</a>
+                            </li>
+                            <li class="header__list--item">
+                                <a href="./contacts.html" class="header__list--link">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__leftside">
+                        <div class="header__city">
+                            <span class="header__city--name">Ваш город:</span>
+                            <a href="#" class="header__city--link">Краснодарский край</a>
+                        </div>
+                        <a href="tel:+7(961)517-36-68" class="phone header__phone">
+                            <span class="phone__icon">
+                                <svg class="phone__icon--elem">
+                                    <use xlink:href="./img/icons/sprite.svg#phone"></use>
+                                </svg>
+                            </span>
+                            <span class="span phone__number">+7(961)517-36-68</span>
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <div class="header__mobile">
+                <div class="container header__mobile--cont">
+                    <div class="burger__mobile menu--switcher">
+                        <span class="burger__span"></span>
+                        <span class="burger__span"></span>
+                        <span class="burger__span"></span>
+                    </div>
+                    <ul class="header__icons--mb">
+                        <li class="header__icon--mb">
+                            <svg class="header__icon--elem--mb nav-pannel--basket nav-pannel--bs">
+                                <use xlink:href="./img/icons/sprite.svg#basket"></use>
+                            </svg>
+                        </li>
+                        <li class="header__icon--mb">
+                            <svg class="header__icon--elem--mb nav-pannel--heart">
+                                <use xlink:href="./img/icons/sprite.svg#heart"></use>
+                            </svg>
+                        </li>
+                        <li class="header__icon--mb">
+                            <svg class="header__icon--elem--mb nav-pannel--statistical">
+                                <use xlink:href="./img/icons/sprite.svg#statistical"></use>
+                            </svg>
+                            <div class="header__dropdown">
+                                <a href="#" class="header__dropdown--link">
+                                    <svg class="header__dropdown--icon">
+                                        <use xlink:href="./img/icons/sprite.svg#money2"></use>
+                                    </svg>
+                                    <div class="header__dropdown--text">6 баллов</div>
+                                </a>
+                                <a href="#" class="header__dropdown--link">
+                                    <svg class="header__dropdown--icon">
+                                        <use xlink:href="./img/icons/sprite.svg#user2"></use>
+                                    </svg>
+                                    <div class="header__dropdown--text">Профиль</div>
+                                </a>
+                                <a href="#" class="header__dropdown--link">
+                                    <svg class="header__dropdown--icon">
+                                        <use xlink:href="./img/icons/sprite.svg#shopping-bag"></use>
+                                    </svg>
+                                    <div class="header__dropdown--text">Мои заказы</div>
+                                </a>
+                                <a href="#" class="header__dropdown--link">
+                                    <svg class="header__dropdown--icon">
+                                        <use xlink:href="./img/icons/sprite.svg#chat"></use>
+                                    </svg>
+                                    <div class="header__dropdown--text">Сообщения</div>
+                                </a>
+                                <a href="#" class="header__dropdown--link">
+                                    <svg class="header__dropdown--icon">
+                                        <use xlink:href="./img/icons/sprite.svg#log-out"></use>
+                                    </svg>
+                                    <div class="header__dropdown--text">Выходы</div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="header__icon--mb">
+                            <svg class="header__icon--elem--mb nav-pannel--user nav-pannel--lc">
+                                <use xlink:href="./img/icons/sprite.svg#user"></use>
+                            </svg>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rainbow rainbow__others">
+                <div class="container rainbow__container">
+                    <div class="logo">
+                        <img src="./img/logo/logo.png" alt="logo" class="logo__pic">
+                    </div>
+                    <div class="search">
+                        <div class="search__icon">
+                            <svg class="search__icon--elem">
+                                <use xlink:href="./img/icons/sprite.svg#search"></use>
+                            </svg>
+                        </div>
+                        <input type="text" class="search__input" placeholder="Поиск по каталогу">
+                        <a href="#" class="btn btn--search">Найти</a>
+                    </div>
+                    <div class="rainbow__icons">
+                        <ul class="nav-pannel">
+                            <li class="nav-pannel__item nav-pannel--bs">
+                                <svg class="nav-pannel--basket">
+                                    <use xlink:href="./img/icons/sprite.svg#basket"></use>
+                                </svg>
+                            </li>
+                            <li class="nav-pannel__item">
+                                <svg class="nav-pannel--heart">
+                                    <use xlink:href="./img/icons/sprite.svg#heart"></use>
+                                </svg>
+                            </li>
+                            <li class="nav-pannel__item nav-pannel--dd">
+                                <svg class="header__icon--elem--mb nav-pannel--statistical">
+                                    <use xlink:href="./img/icons/sprite.svg#statistical"></use>
+                                </svg>
+                                <div class="header__dropdown">
+                                    <a href="#" class="header__dropdown--link">
+                                        <svg class="header__dropdown--icon">
+                                            <use xlink:href="./img/icons/sprite.svg#money2"></use>
+                                        </svg>
+                                        <div class="header__dropdown--text">6 баллов</div>
+                                    </a>
+                                    <a href="#" class="header__dropdown--link">
+                                        <svg class="header__dropdown--icon">
+                                            <use xlink:href="./img/icons/sprite.svg#user2"></use>
+                                        </svg>
+                                        <div class="header__dropdown--text">Профиль</div>
+                                    </a>
+                                    <a href="#" class="header__dropdown--link">
+                                        <svg class="header__dropdown--icon">
+                                            <use xlink:href="./img/icons/sprite.svg#shopping-bag"></use>
+                                        </svg>
+                                        <div class="header__dropdown--text">Мои заказы</div>
+                                    </a>
+                                    <a href="#" class="header__dropdown--link">
+                                        <svg class="header__dropdown--icon">
+                                            <use xlink:href="./img/icons/sprite.svg#chat"></use>
+                                        </svg>
+                                        <div class="header__dropdown--text">Сообщения</div>
+                                    </a>
+                                    <a href="#" class="header__dropdown--link">
+                                        <svg class="header__dropdown--icon">
+                                            <use xlink:href="./img/icons/sprite.svg#log-out"></use>
+                                        </svg>
+                                        <div class="header__dropdown--text">Выходы</div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="nav-pannel__item nav-pannel--lc">
+                                <svg class="nav-pannel--user">
+                                    <use xlink:href="./img/icons/sprite.svg#user"></use>
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <nav class="menu">
+                <div class="container header__container">
+                    <ul class="header__list">
+                        <li class="header__list--item menu__item">
+                            <a href="#" class="menu__link  menu__item--burger">
+                                <span class="burger">
+                                    <span class="burger__elem"></span>
+                                    <span class="burger__elem"></span>
+                                    <span class="burger__elem"></span>
+                                </span>
+                                <span>Все категории</span>
+                            </a>
+                        </li>
+                        <li class="header__list--item menu__item">
+                            <a href="#" class="menu__link">РАСПРОДАЖА</a>
+                        </li>
+                        <li class="header__list--item menu__item">
+                            <a href="#" class="menu__link">
+                                <span class="menu__link--text">Аквагрим DIMART</span>
+                                <svg class="menu__link--icon">
+                                    <use xlink:href="./img/icons/sprite.svg#arrowBottom"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="header__list--item menu__item">
+                            <a href="#" class="menu__link">Аквагрим</a>
+                        </li>
+                        <li class="header__list--item menu__item">
+                            <a href="#" class="menu__link">
+                                <span class="menu__link--text">Кисти</span>
+                                <svg class="menu__link--icon">
+                                    <use xlink:href="./img/icons/sprite.svg#arrowBottom"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="header__list--item menu__item">
+                            <a href="#" class="menu__link">
+                                <span class="menu__link--text">Трафареты</span>
+                                <svg class="menu__link--icon">
+                                    <use xlink:href="./img/icons/sprite.svg#arrowBottom"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="header__list--item menu__item">
+                            <a href="#" class="menu__link">
+                                <span class="menu__link--text">Стразы</span>
+                                <svg class="menu__link--icon">
+                                    <use xlink:href="./img/icons/sprite.svg#arrowBottom"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="header__list--item menu__item">
+                            <a href="#" class="menu__link">Спонжи</a>
+                        </li>
+                        <li class="header__list--item menu__item">
+                            <a href="#" class="menu__link">
+                                <span class="menu__link--text">Блестки</span>
+                                <svg class="menu__link--icon">
+                                    <use xlink:href="./img/icons/sprite.svg#arrowBottom"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="header__list--item header--last menu__item">
+                            <a href="#" class="menu__link">Доп.аксессуары</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <nav class="menu--mb">
+                    <div class="container">
+                        <div class="menu__header--mb">
+                            <img src="./img/logo/logo_mobile.png" alt="logo" class="logo__pic--mb">
+                            <div class="menu__close--btn menu--switcher">×</div>
+                        </div>
+                        <ul class="menu__list--mb">
+                            <li class="menu__item--mb">
+                                <a class="menu__link--mb">
+                                    <img src="./img/content/hot-sale.png" alt="icon" class="menu__icon--main--mb">
+                                    <div class="menu__text--mb">РАСПРОДАЖА</div>
+                                </a>
+                            </li>
+                            <li class="menu__item--mb">
+                                <a class="menu__link--mb">
+                                    <img src="./img/content/menu-icon2.png" alt="icon" class="menu__icon--main--mb">
+                                    <div class="menu__text--mb">Аквагрим DIMART</div>
+                                    <svg class="menu__icon--mb">
+                                        <use xlink:href="./img/icons/sprite.svg#arrowRight"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="menu__item--mb">
+                                <a class="menu__link--mb">
+                                    <img src="./img/content/menu-icon3.png" alt="icon" class="menu__icon--main--mb">
+                                    <div class="menu__text--mb">Аквагрим</div>
+                                    <svg class="menu__icon--mb">
+                                        <use xlink:href="./img/icons/sprite.svg#arrowRight"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="menu__item--mb"> 
+                                <a class="menu__link--mb">
+                                    <img src="./img/content/menu-icon4.png" alt="icon" class="menu__icon--main--mb">
+                                    <div class="menu__text--mb">Кисти</div>
+                                    <svg class="menu__icon--mb">
+                                        <use xlink:href="./img/icons/sprite.svg#arrowRight"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="menu__item--mb"> 
+                                <a class="menu__link--mb">
+                                    <img src="./img/content/menu-icon4.png" alt="icon" class="menu__icon--main--mb">
+                                    <div class="menu__text--mb">Траффареты</div>
+                                    <svg class="menu__icon--mb">
+                                        <use xlink:href="./img/icons/sprite.svg#arrowRight"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="menu__item--mb"> 
+                                <a class="menu__link--mb">
+                                    <img src="./img/content/menu-icon4.png" alt="icon" class="menu__icon--main--mb">
+                                    <div class="menu__text--mb">Стразы</div>
+                                    <svg class="menu__icon--mb">
+                                        <use xlink:href="./img/icons/sprite.svg#arrowRight"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="menu__item--mb"> 
+                                <a class="menu__link--mb">
+                                    <img src="./img/content/menu-icon4.png" alt="icon" class="menu__icon--main--mb">
+                                    <div class="menu__text--mb">Спонжи</div>
+                                    <svg class="menu__icon--mb">
+                                        <use xlink:href="./img/icons/sprite.svg#arrowRight"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="menu__item--mb"> 
+                                <a class="menu__link--mb">
+                                    <img src="./img/content/menu-icon4.png" alt="icon" class="menu__icon--main--mb">
+                                    <div class="menu__text--mb">Блестки</div>
+                                    <svg class="menu__icon--mb">
+                                        <use xlink:href="./img/icons/sprite.svg#arrowRight"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="menu__item--mb"> 
+                                <a class="menu__link--mb">
+                                    <img src="./img/content/menu-icon4.png" alt="icon" class="menu__icon--main--mb">
+                                    <div class="menu__text--mb">Клей</div>
+                                    <svg class="menu__icon--mb">
+                                        <use xlink:href="./img/icons/sprite.svg#arrowRight"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="menu__item--mb"> 
+                                <a class="menu__link--mb">
+                                    <img src="./img/content/menu-icon4.png" alt="icon" class="menu__icon--main--mb">
+                                    <div class="menu__text--mb">Спецэффекты</div>
+                                </a>
+                            </li>
+                            <li class="menu__item--mb"> 
+                                <a class="menu__link--mb">
+                                    <img src="./img/content/menu-icon4.png" alt="icon" class="menu__icon--main--mb">
+                                    <div class="menu__text--mb">Линзы</div>
+                                </a>
+                            </li>
+                            <li class="menu__item--mb"> 
+                                <a class="menu__link--mb">
+                                    <img src="./img/content/menu-icon4.png" alt="icon" class="menu__icon--main--mb">
+                                    <div class="menu__text--mb">Планшеты для эскизов</div>
+                                    <svg class="menu__icon--mb">
+                                        <use xlink:href="./img/icons/sprite.svg#arrowRight"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="menu__item--mb"> 
+                                <a class="menu__link--mb">
+                                    <img src="./img/content/menu-icon4.png" alt="icon" class="menu__icon--main--mb">
+                                    <div class="menu__text--mb">Флэш-тату и 3D тату</div>
+                                    <svg class="menu__icon--mb">
+                                        <use xlink:href="./img/icons/sprite.svg#arrowRight"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="menu__item--mb"> 
+                                <a class="menu__link--mb">
+                                    <img src="./img/content/menu-icon4.png" alt="icon" class="menu__icon--main--mb">
+                                    <div class="menu__text--mb">Доп.аксессуары</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            </nav>
+        </section>
+    
+        <div class="container">
+            <div class="nav__small">
+                <a href="#" class="nav__small--link">Главная /</a>
+                <a href="#" class="nav__small--link">Оформление заказа</a>
+            </div>
+        </div>
+    
+        <section class="order order__common">
+            <div class="container">
+                <h2 class="order__title">Оформление заказа</h2>
+                <div class="order__icons">
+                    <a href="#" class="order__icons--wrap">
+                        <svg class="order__icon order__icon--active">
+                            <use xlink:href="./img/icons/sprite.svg#blank"></use>
+                        </svg>
+                        <div class="order__icon--text">Контакты</div>
+                    </a>
+                    <svg class="order__arrow">
+                        <use xlink:href="./img/icons/sprite.svg#arrowRight"></use>
+                    </svg>
+                    <a href="#" class="order__icons--wrap">
+                        <svg class="order__icon">
+                            <use xlink:href="./img/icons/sprite.svg#delivery-truck"></use>
+                        </svg>
+                        <div class="order__icon--text">Доставка</div>
+                    </a>
+                    <svg class="order__arrow">
+                            <use xlink:href="./img/icons/sprite.svg#arrowRight"></use>
+                    </svg>
+                    <a href="#" class="order__icons--wrap">
+                        <svg class="order__icon">
+                            <use xlink:href="./img/icons/sprite.svg#money"></use>
+                        </svg>
+                        <div class="order__icon--text">Оплата</div>
+                    </a>
+                    <svg class="order__arrow">
+                        <use xlink:href="./img/icons/sprite.svg#arrowRight"></use>
+                    </svg>
+                    <a href="#" class="order__icons--wrap">
+                        <svg class="order__icon">
+                            <use xlink:href="./img/icons/sprite.svg#hand"></use>
+                        </svg>
+                        <div class="order__icon--text">Подтверждение</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    
+        <section class="order">
+            <div class="container order__contacts">
+                <div class="order__contacts--side">
+                    <div class="order__contacts--side--inner">
+                        <h3 class="order__title--small">Контактные данные</h3>
+                        <div class="order__radios">
+                            <label class="radio__button">
+                                <input class="radio" name="format" type="checkbox">
+                                <div class="radio__wrap">
+                                    <span class="radio__text">Физическое лицо</span>
+                                </div>
+                            </label>
+                            <label class="radio__button">
+                                <input class="radio" name="format" type="checkbox">
+                                <div class="radio__wrap">
+                                    <span class="radio__text">Юридическое лицо</span>
+                                </div>
+                            </label>
+                            <label class="radio__button">
+                                <input class="radio" name="format" type="checkbox">
+                                <div class="radio__wrap">
+                                    <span class="radio__text">Без регистрации</span>
+                                </div>
+                            </label>
+                        </div>
+                        <form class="form" method="POST">
+                            <label class="form__label">
+                                <div class="form__key">Имя:</div>
+                                <input type="text" placeholder="Имя покупателя, владельца аккаунта" class="form__input">
+                            </label>
+                            <label class="form__label">
+                                <div class="form__key">Фамилия:</div>
+                                <input type="text" placeholder="Имя покупателя, владельца аккаунта" class="form__input">
+                            </label>
+                            <label class="form__label">
+                                <div class="form__key">Отчество:</div>
+                                <input type="text" placeholder="Имя покупателя, владельца аккаунта" class="form__input">
+                            </label>
+                            <label class="form__label">
+                                <div class="form__key">Телефон</div>
+                                <input type="text" placeholder="Имя покупателя, владельца аккаунта" class="form__input">
+                            </label>
+                            <label class="form__label">
+                                <div class="form__key">E-mail:</div>
+                                <input type="text" placeholder="Имя покупателя, владельца аккаунта" class="form__input">
+                            </label>
+                            <label class="form__label">
+                                <div class="form__key">Пароль:</div>
+                                <input type="text" placeholder="Имя покупателя, владельца аккаунта" class="form__input">
+                            </label>
+                            <label class="form__label">
+                                <div class="form__key">Подтвердите пароль:</div>
+                                <input type="text" placeholder="Имя покупателя, владельца аккаунта" class="form__input">
+                            </label>
+                        </form>
+                    </div>
+                </div>
+                <div class="order__contacts--side">
+                    <div class="order__contacts--side--inner">
+                        <h3 class="order__title--small order__title--adress">Адрес</h3>
+                        <form class="form" method="POST">
+                            <label class="form__label">
+                                <div class="form__key">Страна:</div>
+                                <input type="text" placeholder= "Россия" class="form__input">
+                            </label>
+                            <label class="form__label">
+                                <div class="form__key">Область:</div>
+                                <select class="form__select" name="region" id="region">
+                                    <option selected value="1" class="form__input form__option">Россия</option>
+                                    <option value="2" class="form__option form__input">Адыгея</option>
+                                    <option value="3" class="form__option form__input">Дагестан</option>
+                                    <option value="4" class="form__option form__input">Россия</option>
+                                    <option value="5" class="form__option form__input">Россия</option>
+                                </select>
+                            </label>
+                            <label class="form__label">
+                                <div class="form__key">Город:</div>
+                                <input type="text" placeholder="Москва" class="form__input">
+                            </label>
+                            <label class="form__label">
+                                <div class="form__key">Индекс, Адрес:</div>
+                                <input type="text" placeholder=" ул. Красная, 100, офис 71" class="form__input">
+                            </label>
+                            <label class="form__label">
+                                <div class="form__key">Контактное лицо:</div>
+                                <input type="text" placeholder="Имя покупателя, владельца аккаунта" class="form__input">
+                            </label>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="delivery">
+            <div class="container delivery__container">
+                <h3 class="order__title--small">Доставка</h3>
+                <div class="delivery__types delivery__types--first">
+                    <label class="delivery__button">
+                        <input class="delivery__checkbox" name="checkbox" type="checkbox">
+                            <span class="delivery__block"></span>
+                            <span class="delivery__text">
+                                <span class="delivery__text--up">Доставка по Краснодару ( Курьерской службой)</span>
+                                <span class="delivery__text--down delivery__text--none">Доставка осуществляется на следующие день после оплаты заказа</span>
+                            </span>
+                    </label>
+                    <div class="delivery__price">900 р.</div>
+                    <span class="delivery__text--down delivery__text--mb">Доставка осуществляется на следующие день после оплаты заказа</span>
+                </div>
+                <div class="delivery__types">
+                    <label class="delivery__button">
+                        <input class="delivery__checkbox" name="checkbox" type="checkbox">
+                            <span class="delivery__block"></span>
+                            <span class="delivery__text">
+                                <span class="delivery__text--up">Транспортной компанией CDEK </span>
+                            </span>
+                    </label>
+                    <div class="delivery__price">700 р.</div>
+                </div>
+                <div class="delivery__types">
+                    <label class="delivery__button">
+                        <input class="delivery__checkbox" name="checkbox" type="checkbox">
+                            <span class="delivery__block"></span>
+                            <span class="delivery__text">
+                                <span class="delivery__text--up">Почтой России</span>
+                            </span>
+                    </label>
+                    <div class="delivery__price">700 р.</div>
+                </div>
+                <div class="delivery__types">
+                    <label class="delivery__button">
+                        <input class="delivery__checkbox" name="checkbox" type="checkbox">
+                            <span class="delivery__block"></span>
+                            <span class="delivery__text">
+                                <span class="delivery__text--up">Другое</span>
+                                <span class="delivery__text--hooks"> (Укажите удобный для вас способ доставки)</span>
+                            </span>
+                    </label>
+                    <input type="text" class="delivery__input">
+                </div>
+            </div>
+        </section>
+    
+        <section class="payment delivery">
+            <div class="container delivery__container">
+                <h3 class="order__title--small">Оплата</h3>
+                <div class="order__radios">
+                    <label class="radio__button">
+                        <input class="radio" name="format" type="checkbox">
+                        <div class="radio__wrap">
+                            <span class="radio__text">Физическое лицо</span>
+                        </div>
+                    </label>
+                    <label class="radio__button">
+                        <input class="radio" name="format" type="checkbox">
+                        <div class="radio__wrap">
+                            <span class="radio__text">Юридическое лицо</span>
+                        </div>
+                    </label>
+                    <label class="radio__button">
+                        <input class="radio" name="format" type="checkbox">
+                        <div class="radio__wrap">
+                            <span class="radio__text">Без регистрации</span>
+                        </div>
+                    </label>
+                </div>
+                <label class="delivery__button payment__button">
+                    <input class="delivery__checkbox" name="checkbox" type="checkbox">
+                        <span class="delivery__block"></span>
+                        <span class="delivery__text">
+                            <span class="delivery__text--up">Яндекс касса ( банковские карты, электронные деньги и другое)</span>
+                        </span>
+                </label>
+                <label class="delivery__button payment__button">
+                    <input class="delivery__checkbox" name="checkbox" type="checkbox">
+                        <span class="delivery__block"></span>
+                        <span class="delivery__text">
+                            <span class="delivery__text--up">Оплата наложенным платежем через доставку CDEKом</span>
+                        </span>
+                </label>
+                <label class="delivery__button payment__button">
+                    <input class="delivery__checkbox" name="checkbox" type="checkbox">
+                        <span class="delivery__block"></span>
+                        <span class="delivery__text">
+                            <span class="delivery__text--up">Переводом на карту Свербанка через мобильное приложение Свербанк-онлайн, банкомат</span>
+                        </span>
+                </label>
+                <label class="delivery__button payment__button">
+                    <input class="delivery__checkbox" name="checkbox" type="checkbox">
+                        <span class="delivery__block"></span>
+                        <span class="delivery__text">
+                            <span class="delivery__text--up">Оплата наличными курьеру при доставке ( по г. Краснодару)</span>
+                        </span>
+                </label>
+                <label class="delivery__button payment__button">
+                    <input class="delivery__checkbox" name="checkbox" type="checkbox">
+                        <span class="delivery__block"></span>
+                        <span class="delivery__text">
+                            <span class="delivery__text--up">Безналичный расчет</span>
+                        </span>
+                </label>
+                <label class="delivery__button payment__button">
+                    <input class="delivery__checkbox" name="checkbox" type="checkbox">
+                        <span class="delivery__block"></span>
+                        <span class="delivery__text delivery__text--rows">
+                            <span class="delivery__text--up delivery__text--up--mb">Квитанция банка</span>
+                            <span class="delivery__text--down delivery__text--down--abs">Система предложит распечатать бланк, для оплаты в любом отделении банка</span>
+                        </span>
+                </label>
+            </div>
+        </section>
+        
+        <section class="order__info">
+            <div class="container">
+                <div class="goods">
+                    <ul class="goods__list">
+                        <li class="goods__item">
+                            <h3 class="order__title--small">Сведения о заказе</h3>
+                            <div class="goods__item--wrap">
+                                <div class="gooods__naming">
+                                    <div class="goods__key--first">Товар</div>
+                                    <div class="goods__naming--wrap">
+                                        <picture>
+                                            <source srcset="../img/content/goodspic-mb.png" media="(max-width: 799px)">
+                                            <img src="./img/content/goodspic.png" alt="goods" class="goods__pic">
+                                        </picture>
+                                        <div class="goods__title">Кисть № 2 угловая</div>
+                                    </div>
+                                </div>
+                                <div class="goods__block">
+                                    <div class="goods__key">Цена</div>
+                                    <div class="goods__price">₽ 240 р.</div>
+                                </div>
+                                <div class="goods__block">
+                                    <div class="goods__key">Количество</div>
+                                    <div class="goods__text">1</div>
+                                </div>
+                                <div class="goods__block">
+                                    <div class="goods__key">Доставка</div>
+                                    <div class="goods__text">₽ 300 р.</div>
+                                </div>
+                                <div class="goods__block">
+                                    <div class="goods__key">Сумма</div>
+                                    <div class="goods__text goods__text--bold">₽ 540 р.</div>
+                                </div>
+                                <svg class="goods__trash">
+                                    <use xlink:href="./img/icons/sprite.svg#trash"></use>
+                                </svg>
+                            </div>
+                        </li>
+                        <li class="goods__item">
+                            <div class="goods__item--wrap">
+                                <div class="gooods__naming">
+                                    <div class="goods__key--first">Товар</div>
+                                    <div class="goods__naming--wrap">
+                                        <img src="./img/content/goodspic.png" alt="goods" class="goods__pic">
+                                        <div class="goods__title">Кисть № 2 угловая</div>
+                                    </div>
+                                </div>
+                                <div class="goods__block">
+                                    <div class="goods__key">Цена</div>
+                                    <div class="goods__price">₽ 240 р.</div>
+                                </div>
+                                <div class="goods__block">
+                                    <div class="goods__key">Количество</div>
+                                    <div class="goods__text">1</div>
+                                </div>
+                                <div class="goods__block">
+                                    <div class="goods__key">Доставка</div>
+                                    <div class="goods__text">₽ 300 р.</div>
+                                </div>
+                                <div class="goods__block">
+                                    <div class="goods__key">Сумма</div>
+                                    <div class="goods__text goods__text--bold">₽ 540 р.</div>
+                                </div>
+                                <svg class="goods__trash">
+                                    <use xlink:href="./img/icons/sprite.svg#trash"></use>
+                                </svg>
+                            </div>
+                        </li>
+                        <li class="goods__item goods__bonus">
+                            <span class="goods__bonus--text">На вашей бонусной системе за покупку материалов под брендом DIMART = <span>10</span> баллов</span>
+                        </li>
+                    </ul>
+                    <div class="total">
+                        <h2 class="total__title">Итого</h2>
+                        <div class="total__info">
+                            <div class="total__text"><span>1</span> товар на сумму </div>
+                            <div class="total__price">₽ <span>240</span> р.</div>
+                        </div>
+                        <div class="total__info">
+                            <div class="total__text"> Стоимость доставки </div>
+                            <div class="total__price">₽ <span>300</span> р.</div>
+                        </div>
+                        <div class="total__info">
+                            <div class="total__text total__text--yellow"> Оплатить бонусами </div>
+                            <div class="total__bonus"> <span>10</span> баллов</div>
+                        </div>
+                        <div class="total__info total__info--last">
+                            <div class="total__text"> К оплате </div>
+                            <div class="total__price--big"> ₽ 530 р. </div>
+                        </div>
+                        <a href="#" class="btn--total">Заказ подтверждаю</a>
+                    </div>
+                </div>
+            </div>
+        </section>  
+    </div>  
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <img src="./img/logo/logo.png" alt="logo" class="logo footer__logo">
+            <div class="footer__wrapper">
+                <nav class="footer__nav">
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link footer__link--active">О компании</a>
+                            <a href="#" class="footer__link">Главная</a>
+                            <a href="#" class="footer__link">О нас</a>
+                            <a href="#" class="footer__link">Оплата</a>
+                            <a href="#" class="footer__link">Доставка</a>
+                            <a href="#" class="footer__link">Наши реквизиты</a>
+                            <a href="#" class="footer__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer__item footer__payment">
+                    <a href="#" class="footer__link footer__link--active">Принимаем к оплате</a>
+                    <a href="#" class="footer__link">
+                        Прием платежей производится через сервис Яндекс Касса 
+                        <span class="footer__payment--small">(банковские карты, электронные деньги и др.)</span>
+                    </a>
+                    <a href="#" class="footer__link">На расчетный счет</a>
+                    <a href="#" class="footer__link">Оплата товара при получении</a>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__link footer__link--active">Контакты</div>
+                    <a href="tel:+7(961)517-36-68" class="footer__link footer__link--tel">8-961-517-36-68</a>
+                    <span class="footer__payment--small">Интернет-магазин</span>
+                    <div class="footer__link footer__mail">E-mail</div>
+                    <a href="mailto:raduga-grima@mail.ru" class="footer__link--mail">raduga-grima@mail.ru</a>
+                </div>
+                <div class="footer__item">
+                    <a href="#" class="footer__link footer__link--active footer__link--social">Мы в соцсетях</a>
+                    <div class="footer__icons">
+                        <svg class="footer__icon">
+                            <use xlink:href="./img/icons/sprite.svg#facebook"></use>
+                        </svg>
+                        <svg class="footer__icon">
+                            <use xlink:href="./img/icons/sprite.svg#instagramm"></use>
+                        </svg>
+                        <div class="footer__wrap">
+                            <svg class="footer__icon footer__icon--tw">
+                                <use xlink:href="./img/icons/sprite.svg#twitter"></use>
+                            </svg>
+                        </div>
+                        <div class="footer__wrap">
+                            <svg class="footer__icon footer__icon--vk">
+                                <use xlink:href="./img/icons/sprite.svg#vk"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+    <script src="./main.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.0/slimselect.min.js"></script>
+    <script>
+        new SlimSelect({
+            select: '#region',
+            showSearch: false
+        });
+    </script>
+</body>
+</html>
